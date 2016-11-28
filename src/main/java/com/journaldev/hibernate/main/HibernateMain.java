@@ -11,7 +11,7 @@ public class HibernateMain {
 
 	public static void main(String[] args) {
 		Employee emp = new Employee();
-		emp.setName("Pankaj");
+		emp.setName("root");
 		emp.setRole("CEO");
 		emp.setInsertTime(new Date());
 		

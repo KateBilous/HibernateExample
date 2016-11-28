@@ -53,4 +53,20 @@ public class Employee1 {
 	public void setInsertTime(Date insertTime) {
 		this.insertTime = insertTime;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		sb
+			.append("ID = ")
+			.append(id)
+			.append("\tNAME = ")
+			.append(name)
+			.append("\tROLE = ")
+			.append(role)
+			.append("\tDATE = ")
+			.append(insertTime);		
+		
+		return sb.toString();
+	}
 }
