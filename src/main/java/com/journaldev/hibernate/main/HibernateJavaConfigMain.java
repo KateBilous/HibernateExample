@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 import com.journaldev.hibernate.model.Employee1;
 import com.journaldev.hibernate.util.HibernateUtil;
 
-public class HibernateJavaConfigMain {
+public class  HibernateJavaConfigMain {
 
 	public static void main(String[] args) {
 		Employee1 emp = new Employee1();
