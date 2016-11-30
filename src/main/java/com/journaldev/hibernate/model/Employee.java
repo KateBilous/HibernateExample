@@ -4,15 +4,18 @@ import java.util.Date;
 
 public class Employee {
 
-	private int id;
+
+	private Integer id;
 	private String name;
 	private String role;
 	private Date insertTime;
-	
-	public int getId() {
+	private Department department;
+
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -33,5 +36,13 @@ public class Employee {
 	public void setInsertTime(Date insertTime) {
 		this.insertTime = insertTime;
 	}
-	
+	public Department getDepartment() {return department;}
+	public void setDepartment(Department department) {	this.department = department;	}
+
+	@Override
+	public String toString() {
+		return "Id:"+id+" Name:"+name+" Role:"+role+" Date: "+insertTime;
+	}
+
+
 }

@@ -1,11 +1,12 @@
 package com.journaldev.hibernate.main;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import com.journaldev.hibernate.model.Employee;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -13,7 +14,6 @@ import org.hibernate.SessionFactory;
 
 import com.journaldev.hibernate.model.Employee1;
 import com.journaldev.hibernate.util.HibernateUtil;
-import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 import org.testng.annotations.Test;
 
@@ -239,7 +239,7 @@ public class HibernateAnnotationMain {
 		session.beginTransaction();
 		Criteria cr = session.createCriteria(Employee1.class);
 
-		cr.add(Restrictions.eq("interest_time", ("2016-11-25")));
+		cr.add(Restrictions.eq("insert_time", dateFromString("2016-11-25")));
 		List results = cr.list();
 
 		for(int i = 0; i<results.size(); i++){
@@ -251,6 +251,17 @@ public class HibernateAnnotationMain {
 
 
 	}
+	private Date dateFromString(String date){
+		SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd");
+		Date resultDate = null;
+		try {
+			resultDate = formatter.parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return resultDate;
+	}
+
 
 
 
