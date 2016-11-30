@@ -6,7 +6,7 @@
 	<session-factory>
 		<!-- Database connection properties - Driver, URL, user, password -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://192.168.1.54/db1</property>
+		<property name="hibernate.connection.url">jdbc:mysql://192.168.0.85/db1</property>
 		<property name="hibernate.connection.username">kate</property>
 		<property name="hibernate.connection.password">013200</property>
 		<!-- Connection Pool Size -->
